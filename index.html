@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portifolio</title>
+</head>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfólio | Igor</title>
+</head>
+<body>
+    
+    <nav class="menu-lateral">
+        <a href="javascript:void(0)" onclick="trocarPagina('home')">
+            <div class="item"><img src="img/botao-de-inicio.png" alt="Início"></div>
+        </a>
+        <a href="javascript:void(0)" onclick="trocarPagina('sobre')">
+            <div class="item"><img src="img/pessoa.png" alt="Sobre"></div>
+        </a>
+        <a href="javascript:void(0)" onclick="trocarPagina('contato')">
+            <div class="item"><img src="img/e-mail.png" alt="Contato"></div>
+        </a>
+    </nav>
+
+    <main>
+        <section id="home" class="texto secao-conteudo">
+            <h1>Olá, eu sou o Igor</h1>
+            <p>
+               Desenvolvedor focado em soluções modernas e entusiasta do ecossistema Linux. 
+               Transformando café em código e interfaces funcionais.
+            </p>
+            <button class="botao-home">contato</button>
+        </section>
+
+        <section id="sobre" class="texto secao-conteudo" style="display: none;">
+            <h1>Sobre Mim</h1>
+            <p>Aqui você conta sua história, seus estudos em ADS e sua experiência com Linux.</p>
+        </section>
+
+        <section id="contato" class="texto secao-conteudo" style="display: none;">
+            <h1>Contato</h1>
+            <p>Como as pessoas podem te achar? LinkedIn, GitHub ou E-mail.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+</html>

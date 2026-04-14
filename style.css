@@ -1,0 +1,110 @@
+/* Reset e Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho do elemento */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #05051e;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- MENU LATERAL --- */
+.menu-lateral{
+    background-color: rgba(42, 34, 82, 0.6); /* Roxo com transparência */
+    padding: 30px 15px;
+    border-radius: 60px; /* Formato de pílula */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    min-width: 80px; /* Garante que a barra não suma */
+    align-items: left;
+    height: 100px;
+    position: fixed;
+    left: 40px;
+    height: 300px;
+}
+.item {
+    width: 50px; /* Aumentei um pouco para respirar melhor */
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.05); /* Mais sutil */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;     /* Centraliza vertical */
+    justify-content: center; /* Centraliza horizontal */
+    transition: 0.3s;        /* Para o efeito de hover */
+}
+
+.item img {
+    width: 24px;  /* Tamanho fixo para os ícones */
+    height: 24px;
+    filter: invert(1); /* Se seus ícones forem pretos, isso os deixará brancos */
+}
+
+/*Cartão de visita*/
+.texto {
+    /* Como o menu ocupa ~120px da esquerda (40px de left + 80px de largura) */
+    margin-left: 250px; 
+    padding: 20px;
+    max-width: 800px;
+}
+
+.texto h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    /* Um degradê sutil para combinar com o roxo do menu */
+    background: linear-gradient(to right, #fff, #a29bfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.texto p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7); /* Branco suave para melhor leitura */
+    max-width: 500px;
+}
+
+/* Um detalhe: se quiser que o texto também fique centralizado verticalmente */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinha ao início por causa do margin-left */
+}
+.botao-home {
+    margin-top: 25px;
+    padding: 12px 35px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    
+    /* Gradiente que combina com o seu tema */
+    background: linear-gradient(45deg, #4b3a92, #8a2be2);
+    border: none;
+    border-radius: 50px; /* Formato de pílula igual ao menu */
+    
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+}
+
+/* Efeito ao passar o mouse */
+.botao-home:hover {
+    transform: translateY(-3px); /* Ele "sobe" levemente */
+    box-shadow: 0 8px 25px rgba(138, 43, 226, 0.5); /* O brilho aumenta */
+    filter: brightness(1.1); /* Dá uma leve clareada */
+}
+
+/* Efeito ao clicar */
+.botao-home:active {
+    transform: translateY(1px);
+}
