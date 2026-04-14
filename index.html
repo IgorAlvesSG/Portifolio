@@ -1,18 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Portifolio</title>
-</head>
-<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Portfólio | Igor</title>
+    <link rel="stylesheet" href="style.css"> <title>Portfólio | Igor</title>
 </head>
 <body>
     
@@ -35,21 +26,41 @@
                Desenvolvedor focado em soluções modernas e entusiasta do ecossistema Linux. 
                Transformando café em código e interfaces funcionais.
             </p>
-            <button class="botao-home">contato</button>
+            <button class="botao-home" onclick="trocarPagina('contato')">contato</button>
         </section>
 
         <section id="sobre" class="texto secao-conteudo" style="display: none;">
-            <h1>Sobre Mim</h1>
-            <p>Aqui você conta sua história, seus estudos em ADS e sua experiência com Linux.</p>
+            <h1>Meus Projetos</h1>
+            <p>Estudante de Análise e Desenvolvimento de Sistemas (ADS). Veja algumas das minhas soluções:</p>
+            
+            <div class="grid-projetos">
+                <div class="card">
+                    <div class="tag-linguagem python">Python</div>
+                    <h3>Automação Linux</h3>
+                    <p>Scripts desenvolvidos no Pop!_OS para otimização de tarefas e tratamento de dados.</p>
+                </div>
+
+                <div class="card">
+                    <div class="tag-linguagem java">Java</div>
+                    <h3>Sistemas ADS</h3>
+                    <p>Projetos acadêmicos focados em Orientação a Objetos e lógica estruturada.</p>
+                </div>
+
+                <div class="card">
+                    <div class="tag-linguagem cpp">C / C++</div>
+                    <h3>Performance</h3>
+                    <p>Desenvolvimento de algoritmos de baixo nível e manipulação de memória.</p>
+                </div>
+            </div>
         </section>
 
         <section id="contato" class="texto secao-conteudo" style="display: none;">
             <h1>Contato</h1>
-            <p>Como as pessoas podem te achar? LinkedIn, GitHub ou E-mail.</p>
+            <p>Sinta-se à vontade para me mandar uma mensagem ou conferir meus projetos no GitHub!</p>
         </section>
     </main>
 
     <script src="script.js"></script>
+    
 </body>
-</html>
 </html>
