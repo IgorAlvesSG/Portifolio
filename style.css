@@ -78,8 +78,11 @@ body {
     align-items: center;
     justify-content: flex-start; /* Alinha ao início por causa do margin-left */
 }
+/* --- BOTÃO HOME --- */
 .botao-home {
     margin-top: 25px;
+    
+    /* VOLTAMOS PARA O SEU TAMANHO ORIGINAL */
     padding: 12px 35px;
     font-size: 1rem;
     font-weight: 600;
@@ -87,29 +90,32 @@ body {
     letter-spacing: 1px;
     color: white;
     
-    /* Gradiente que combina com o seu tema */
+    /* AS DUAS LINHAS PARA ELE NÃO ESTICAR NA TELA TODA */
+    width: fit-content; 
+    align-self: flex-start; 
+    
+    /* SEU VISUAL ORIGINAL */
     background: linear-gradient(45deg, #4b3a92, #8a2be2);
     border: none;
-    border-radius: 50px; /* Formato de pílula igual ao menu */
-    
+    border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
 }
 
-/* Efeito ao passar o mouse */
+/* Efeito ao passar o mouse (O seu original!) */
 .botao-home:hover {
-    transform: translateY(-3px); /* Ele "sobe" levemente */
-    box-shadow: 0 8px 25px rgba(138, 43, 226, 0.5); /* O brilho aumenta */
-    filter: brightness(1.1); /* Dá uma leve clareada */
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 25px rgba(138, 43, 226, 0.5); 
+    filter: brightness(1.1); 
 }
 
-/* Efeito ao clicar */
-.botao-home:active {a
+/* Efeito ao clicar (O seu original!) */
+.botao-home:active {
     transform: translateY(1px);
 }
 
-/* --- GRID DE PROJETOS E CARDS --- */
+/*  GRID DE PROJETOS E CARDS  */
 .grid-projetos {
     display: grid;
     /* Cria colunas que se ajustam automaticamente ao tamanho da tela */
