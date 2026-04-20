@@ -63,42 +63,54 @@
                 <p>Seja para uma oportunidade de estágio em ADS, um projeto freela em Python/Java ou apenas para trocar uma ideia sobre Linux. Me mande uma mensagem!</p>
                 
                 <div class="dados-diretos">
+                <a href="https://www.linkedin.com/in/igor-alves-silva-goes/" target="_blank" class="link-dado">
                     <div class="item-dado">
-                        <div class="icone-dado">✉️</div>
+                        <div class="icone-dado">🌐</div>
                         <div>
-                            <span>E-mail</span>
-                            <strong>igorasgoes@gmai.com</strong>
+                            <span>LinkedIn</span>
+                            <strong>/in/igor-dev</strong>
                         </div>
                     </div>
+                </a>
+
+                <a href="https://github.com/IgorAlvesSG" target="_blank" class="link-dado">
                     <div class="item-dado">
-                        <div class="icone-dado">🔗</div>
+                        <div class="icone-dado">💻</div>
+                        
                         <div>
-                            <span>GitHub / LinkedIn</span>
+                            <span>GitHub</span>
                             <strong>/IgorAlvesSG</strong>
                         </div>
                     </div>
-                </div>
+                </a>
+             </div>
             </div>
 
             <div class="box-formulario">
-                <form action="#" method="POST" class="form-estilizado">
+                <<div class="box-formulario">
+                <form action="https://formsubmit.co/igorasgoes@gmail.com" method="POST" class="form-estilizado">
+                    
+                    <input type="hidden" name="_subject" value="Novo contato pelo Portfólio!">
+                    <input type="hidden" name="_captcha" value="false">
+
                     <div class="grupo-input">
                         <label for="nome">Nome</label>
-                        <input type="text" id="nome" placeholder="Como devo te chamar?">
+                        <input type="text" name="nome" id="nome" placeholder="Como devo te chamar?" required>
                     </div>
                     
                     <div class="grupo-input">
                         <label for="email">E-mail</label>
-                        <input type="email" id="email" placeholder="igorasgoes@gmail.com">
+                        <input type="email" name="email" id="email" placeholder="seu@email.com" required>
                     </div>
 
                     <div class="grupo-input">
                         <label for="mensagem">Mensagem</label>
-                        <textarea id="mensagem" rows="4" placeholder="Como posso te ajudar?"></textarea>
+                        <textarea name="mensagem" id="mensagem" rows="4" placeholder="Como posso te ajudar?" required></textarea>
                     </div>
                     
                     <button type="submit" class="botao-home">Enviar Mensagem</button>
                 </form>
+            </div>
             </div>
 
         </div>

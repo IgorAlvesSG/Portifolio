@@ -164,7 +164,7 @@ body {
 /* =========================================
    SEÇÃO DE CONTATO (SPLIT SCREEN TURBINADO)
    ========================================= */
-   
+
 
 /* 1. O SEGREDO DO ESPAÇO: Alarga a tela só nessa aba */
 #contato.texto {
@@ -188,7 +188,11 @@ body {
     display: flex;
     flex-direction: column;
 }
-
+.link-dado {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Garante que a área clicável pegue o card todo */
+}
 .subtitulo-contato {
     font-size: 0.8rem;
     font-weight: bold;
