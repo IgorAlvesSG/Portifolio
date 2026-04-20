@@ -76,7 +76,7 @@
                 <a href="https://github.com/IgorAlvesSG" target="_blank" class="link-dado">
                     <div class="item-dado">
                         <div class="icone-dado">💻</div>
-                        
+
                         <div>
                             <span>GitHub</span>
                             <strong>/IgorAlvesSG</strong>
@@ -87,31 +87,31 @@
             </div>
 
             <div class="box-formulario">
-                <<div class="box-formulario">
-                <form action="https://formsubmit.co/igorasgoes@gmail.com" method="POST" class="form-estilizado">
-                    
-                    <input type="hidden" name="_subject" value="Novo contato pelo Portfólio!">
-                    <input type="hidden" name="_captcha" value="false">
+                <form id="form-contato" action="https://formsubmit.co/ajax/d5f5a337f9b5909d6b28f2df93f6f4c6" method="POST" class="form-estilizado">
+                
+                <input type="hidden" name="_subject" value="Novo contato pelo Portfólio!">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_ajax" value="true">
 
-                    <div class="grupo-input">
-                        <label for="nome">Nome</label>
-                        <input type="text" name="nome" id="nome" placeholder="Como devo te chamar?" required>
-                    </div>
-                    
-                    <div class="grupo-input">
-                        <label for="email">E-mail</label>
-                        <input type="email" name="email" id="email" placeholder="seu@email.com" required>
-                    </div>
+                <div class="grupo-input">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome" placeholder="Como devo te chamar?" required>
+                </div>
+                
+                <div class="grupo-input">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="seu@email.com" required>
+                </div>
 
-                    <div class="grupo-input">
-                        <label for="mensagem">Mensagem</label>
-                        <textarea name="mensagem" id="mensagem" rows="4" placeholder="Como posso te ajudar?" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="botao-home">Enviar Mensagem</button>
-                </form>
-            </div>
-            </div>
+                <div class="grupo-input">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea name="mensagem" id="mensagem" rows="4" placeholder="Como posso te ajudar?" required></textarea>
+                </div>
+                
+                <button type="submit" id="btn-enviar" class="botao-home">Enviar Mensagem</button>
+                <p id="status-envio" style="display: none; text-align: center; margin-top: 15px; font-weight: bold;"></p>
+            </form>
+        </div>
 
         </div>
     </section>
