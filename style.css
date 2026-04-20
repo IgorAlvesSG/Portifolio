@@ -159,3 +159,161 @@ body {
 .python { background: #3776ab33; color: #5dade2; }
 .java { background: #b0721933; color: #f5b041; }
 .cpp { background: #f34b7d33; color: #f1948a; }
+
+
+/* =========================================
+   SEÇÃO DE CONTATO (SPLIT SCREEN TURBINADO)
+   ========================================= */
+   
+
+/* 1. O SEGREDO DO ESPAÇO: Alarga a tela só nessa aba */
+#contato.texto {
+    max-width: 1400px; /* Aumentamos bastante o limite para monitores grandes */
+    width: 90%; /* Força ele a tentar ocupar a tela */
+    margin-right: auto; /* Joga o respiro que sobra para o lado direito também */
+}
+
+/* 2. O Container Principal */
+.container-contato {
+    display: flex;
+    gap: 80px; 
+    width: 100%;
+    margin-top: 20px;
+    align-items: center; 
+    justify-content: space-between; 
+}
+/* --- LADO ESQUERDO: INFO --- */
+.info-contato {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+.subtitulo-contato {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #a29bfe;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.info-contato h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.info-contato p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.dados-diretos {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Micro-interações nos itens de contato */
+.item-dado {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.item-dado:hover {
+    background: rgba(255, 255, 255, 0.02);
+    transform: translateX(10px);
+}
+
+.icone-dado {
+    background: rgba(138, 43, 226, 0.1);
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    transition: 0.3s ease;
+}
+
+.item-dado:hover .icone-dado {
+    background: rgba(138, 43, 226, 0.4);
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.5);
+}
+
+.item-dado span {
+    display: block;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.item-dado strong {
+    font-size: 1rem;
+    color: white;
+}
+
+/* --- LADO DIREITO: CARD DO FORMULÁRIO --- */
+.box-formulario {
+    flex: 1.2; 
+    background: rgba(255, 255, 255, 0.02); 
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 50px; /* Mais "gordinho" por dentro */
+    border-radius: 20px;
+    
+    /* Efeito Glassmorphism (Vidro) */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.grupo-input label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.grupo-input input, 
+.grupo-input textarea {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.grupo-input input::placeholder,
+.grupo-input textarea::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Brilho ao clicar nos campos */
+.grupo-input input:focus, 
+.grupo-input textarea:focus {
+    border-color: #8a2be2;
+    background: rgba(138, 43, 226, 0.05);
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Botão dentro do form */
+.box-formulario .botao-home {
+    width: 100%; 
+    text-align: center;
+    margin-top: 15px;
+    padding: 15px; 
+}

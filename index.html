@@ -19,46 +19,91 @@
         </a>
     </nav>
 
-    <main>
-        <section id="home" class="texto secao-conteudo">
-            <h1>Olá, eu sou o Igor</h1>
-            <p>
-               Desenvolvedor focado em soluções modernas e entusiasta do ecossistema Linux. 
-               Transformando café em código e interfaces funcionais.
-            </p>
-            <button class="botao-home" onclick="trocarPagina('contato')">contato</button>
-        </section>
+<main>
+    <section id="home" class="texto secao-conteudo">
+        <h1>Olá, eu sou o Igor</h1>
+        <p>
+           Como desenvolvedor web, meu objetivo é ajudar marcas e pessoas a marcarem presença no mundo digital. 
+           Trabalho no desenvolvimento de interfaces responsivas.
+        </p>
+        <button class="botao-home" onclick="trocarPagina('contato')">contato</button>
+    </section>
 
-        <section id="sobre" class="texto secao-conteudo" style="display: none;">
-            <h1>Meus Projetos</h1>
-            <p>Estudante de Análise e Desenvolvimento de Sistemas (ADS). Veja algumas das minhas soluções:</p>
+    <section id="sobre" class="texto secao-conteudo" style="display: none;">
+        <h1>Habilidades</h1>
+        <p>Estudante de Análise e Desenvolvimento de Sistemas (ADS). Veja algumas das minhas soluções:</p>
+        
+        <div class="grid-projetos">
+            <div class="card">
+                <div class="tag-linguagem python">Python</div>
+                <h3>Automação Linux</h3>
+                <p>Scripts desenvolvidos no Pop!_OS para otimização de tarefas e tratamento de dados.</p>
+            </div>
+
+            <div class="card">
+                <div class="tag-linguagem java">Java</div>
+                <h3>Sistemas ADS</h3>
+                <p>Projetos acadêmicos focados em Orientação a Objetos e lógica estruturada.</p>
+            </div>
+
+            <div class="card">
+                <div class="tag-linguagem cpp">C / C++</div>
+                <h3>Performance</h3>
+                <p>Desenvolvimento de algoritmos de baixo nível e manipulação de memória.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="texto secao-conteudo" style="display: none;">
+        <div class="container-contato">
             
-            <div class="grid-projetos">
-                <div class="card">
-                    <div class="tag-linguagem python">Python</div>
-                    <h3>Automação Linux</h3>
-                    <p>Scripts desenvolvidos no Pop!_OS para otimização de tarefas e tratamento de dados.</p>
-                </div>
-
-                <div class="card">
-                    <div class="tag-linguagem java">Java</div>
-                    <h3>Sistemas ADS</h3>
-                    <p>Projetos acadêmicos focados em Orientação a Objetos e lógica estruturada.</p>
-                </div>
-
-                <div class="card">
-                    <div class="tag-linguagem cpp">C / C++</div>
-                    <h3>Performance</h3>
-                    <p>Desenvolvimento de algoritmos de baixo nível e manipulação de memória.</p>
+            <div class="info-contato">
+                <span class="subtitulo-contato">ESTOU À DISPOSIÇÃO</span>
+                <h1>Vamos criar algo incrível?</h1>
+                <p>Seja para uma oportunidade de estágio em ADS, um projeto freela em Python/Java ou apenas para trocar uma ideia sobre Linux. Me mande uma mensagem!</p>
+                
+                <div class="dados-diretos">
+                    <div class="item-dado">
+                        <div class="icone-dado">✉️</div>
+                        <div>
+                            <span>E-mail</span>
+                            <strong>igorasgoes@gmai.com</strong>
+                        </div>
+                    </div>
+                    <div class="item-dado">
+                        <div class="icone-dado">🔗</div>
+                        <div>
+                            <span>GitHub / LinkedIn</span>
+                            <strong>/IgorAlvesSG</strong>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
 
-        <section id="contato" class="texto secao-conteudo" style="display: none;">
-            <h1>Contato</h1>
-            <p>Sinta-se à vontade para me mandar uma mensagem ou conferir meus projetos no GitHub!</p>
-        </section>
-    </main>
+            <div class="box-formulario">
+                <form action="#" method="POST" class="form-estilizado">
+                    <div class="grupo-input">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" placeholder="Como devo te chamar?">
+                    </div>
+                    
+                    <div class="grupo-input">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="igorasgoes@gmail.com">
+                    </div>
+
+                    <div class="grupo-input">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" rows="4" placeholder="Como posso te ajudar?"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="botao-home">Enviar Mensagem</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+</main>
 
     <script src="script.js"></script>
     
