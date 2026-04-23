@@ -452,3 +452,236 @@ body {
     margin-top: 15px;
     padding: 15px;
 }
+
+
+/* =========================================
+   RESPONSIVO — TABLET (max-width: 1024px)
+   ========================================= */
+
+@media (max-width: 1024px) {
+
+    /* Menu lateral fica menor e mais próximo da borda */
+    .menu-lateral {
+        left: 20px;
+        gap: 30px;
+        height: 260px;
+    }
+
+    /* Seções perdem o margin grande e ganham espaço suficiente */
+    .texto {
+        margin-left: 140px;
+        padding: 30px 30px 30px 20px;
+    }
+
+    #home.texto {
+        margin-left: 110px;
+        padding-right: 20px;
+    }
+
+    #sobre.texto {
+        margin-left: 110px;
+    }
+
+    #contato.texto {
+        margin-left: 110px;
+        width: calc(100% - 130px);
+    }
+
+    /* Home: reduz gap e tamanhos */
+    .container-home {
+        gap: 24px;
+    }
+
+    .info-home h1,
+    .texto h1 {
+        font-size: 2.8rem;
+    }
+
+    /* Contato: gap menor entre colunas */
+    .container-contato {
+        gap: 40px;
+    }
+
+    .box-formulario {
+        padding: 35px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVO — MOBILE (max-width: 768px)
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    /* Body: centraliza o conteúdo sem conflito com menu lateral */
+    body {
+        align-items: flex-start;
+        justify-content: center;
+        padding-bottom: 90px; /* espaço para o menu inferior */
+    }
+
+    /* -------------------------------------------
+       MENU: sai da lateral e vai para o RODAPÉ
+    ------------------------------------------- */
+    .menu-lateral {
+        position: fixed;
+        left: 50%;
+        top: auto;
+        bottom: 20px;
+        transform: translateX(-50%);
+        flex-direction: row;          /* horizontal */
+        height: auto;
+        width: auto;
+        min-width: unset;
+        padding: 14px 24px;
+        gap: 28px;
+        border-radius: 50px;
+        background-color: rgba(42, 34, 82, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        z-index: 200;
+    }
+
+    .item {
+        width: 44px;
+        height: 44px;
+    }
+
+    /* -------------------------------------------
+       SEÇÕES: removem margin lateral grande
+    ------------------------------------------- */
+    .texto,
+    #sobre.texto,
+    #contato.texto {
+        margin-left: 0;
+        width: 100%;
+        max-width: 100%;
+        padding: 30px 20px;
+    }
+
+    /* -------------------------------------------
+       HOME: empilha texto + terminal verticalmente
+    ------------------------------------------- */
+    #home.texto {
+        margin-left: 0;
+        padding: 30px 20px 20px;
+        align-items: flex-start;
+        min-height: calc(100vh - 110px);
+    }
+
+    .container-home {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+    }
+
+    .info-home {
+        width: 100%;
+    }
+
+    .info-home h1,
+    .texto h1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    .texto p,
+    .info-home p {
+        font-size: 1rem;
+    }
+
+    .box-terminal {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .terminal-container {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .terminal-body {
+        height: 220px;
+    }
+
+    /* -------------------------------------------
+       SOBRE: grid de cards em coluna única
+    ------------------------------------------- */
+    .grid-projetos {
+        grid-template-columns: 1fr;
+    }
+
+    /* -------------------------------------------
+       CONTATO: empilha info + formulário
+    ------------------------------------------- */
+    .container-contato {
+        flex-direction: column;
+        gap: 36px;
+    }
+
+    .info-contato {
+        width: 100%;
+    }
+
+    .info-contato h1 {
+        font-size: 2rem;
+    }
+
+    .box-formulario {
+        width: 100%;
+        padding: 24px 20px;
+        border-radius: 16px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVO — MOBILE PEQUENO (max-width: 480px)
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    .info-home h1,
+    .texto h1 {
+        font-size: 1.9rem;
+    }
+
+    .info-contato h1 {
+        font-size: 1.7rem;
+    }
+
+    .botao-home {
+        width: 100%;
+        text-align: center;
+    }
+
+    .terminal-body {
+        font-size: 0.88rem;
+        height: 200px;
+    }
+
+    #terminal-input {
+        font-size: 0.88rem;
+    }
+
+    .prompt {
+        font-size: 0.8rem;
+    }
+
+    .menu-lateral {
+        gap: 20px;
+        padding: 12px 18px;
+        bottom: 14px;
+    }
+
+    .item {
+        width: 40px;
+        height: 40px;
+    }
+
+    .item img {
+        width: 20px;
+        height: 20px;
+    }
+}
