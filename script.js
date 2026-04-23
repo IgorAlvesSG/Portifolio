@@ -73,6 +73,18 @@ const comandos = {
         'console.log("Hello, World!");',
         '<span class="comando-destaque">O começo de tudo.</span>'
     ],
+    hack: () => {
+        let count = 0;
+        const interval = setInterval(() => {
+            escreverNoTerminal(`<span style="color: #0f0;">Injetando SQL em 127.0.0.1... [${count}%]</span>`);
+            count += 20;
+            if (count > 100) {
+                clearInterval(interval);
+                escreverNoTerminal('<span style="color: #0f0;">Acesso concedido. Brincadeira, Igor! É só um portfólio.</span>');
+            }
+        }, 300);
+        return ['Iniciando protocolo de auditoria de segurança...'];
+    },
 
     sudo: () => [
         '<span style="color: #ff5f56;">igor não está no arquivo sudoers. Este incidente será relatado.</span> 🐧'
