@@ -28,6 +28,7 @@ const comandos = {
         '  <span class="comando-destaque">contato</span>   → Como me encontrar',
         '  <span class="comando-destaque">skills</span>    → Tecnologias que uso',
         '  <span class="comando-destaque">clear</span>     → Limpar o terminal',
+        '  <span style="color: #555;">...e talvez alguns segredos perdidos por aí.</span>'
     ],
     sobre: () => [
         'Estudante de Análise e Desenvolvimento de Sistemas (ADS).',
@@ -44,9 +45,76 @@ const comandos = {
     },
     clear: () => {
         terminalOutput.innerHTML = '';
-        return null; // sem output adicional
+        return null; 
     },
+
+    // =========================================
+    // 🥚 EASTER EGGS (COMANDOS SECRETOS)
+    // =========================================
+
+    // 1. A piada clássica do Linux
+
+    shikai: () => [
+        'Desperte, Kyouka Suigetsu...',
+        '<span style="color: #bb9af7;">"Desde quando você estava sob a impressão de que este era um portfólio comum?"</span> 🎭',
+        '(O terminal parece levemente distorcido agora)'
+    ],
+
+    sudo: () => [
+        '<span style="color: #ff5f56;">igor não está no arquivo sudoers. Este incidente será relatado.</span> 🐧'
+    ],
+
+    // 2. O sagrado Neofetch (com arte ASCII do Pop!_OS e dados da sua máquina)
+    neofetch: () => [
+        '<span style="color: #61b5ff; font-weight: bold;">      //////</span>       <span style="color: #9ece6a; font-weight: bold;">igor@pop-os</span>',
+        '<span style="color: #61b5ff; font-weight: bold;">    ////////</span>       -----------',
+        '<span style="color: #61b5ff; font-weight: bold;">  //////////</span>       <span class="comando-destaque">OS:</span> Pop!_OS 22.04 LTS',
+        '<span style="color: #61b5ff; font-weight: bold;"> ///////////</span>       <span class="comando-destaque">Host:</span> Acer Aspire 4739-6864',
+        '<span style="color: #61b5ff; font-weight: bold;">////////////</span>       <span class="comando-destaque">Kernel:</span> 6.0.0-linux',
+        '<span style="color: #61b5ff; font-weight: bold;">////////////</span>       <span class="comando-destaque">Uptime:</span> 21 years',
+        '<span style="color: #61b5ff; font-weight: bold;"> ///////////</span>       <span class="comando-destaque">Shell:</span> bash 5.1.16',
+        '<span style="color: #61b5ff; font-weight: bold;">  //////////</span>       <span class="comando-destaque">Resolution:</span> 1920x1080',
+        '<span style="color: #61b5ff; font-weight: bold;">    ////////</span>       <span class="comando-destaque">Terminal:</span> Web',
+        '<span style="color: #61b5ff; font-weight: bold;">      //////</span>       '
+    ],
+
+    // 3. Liberação de Reiatsu
+    bankai: () => {
+        // Muda as cores temporariamente para um estilo "sanguinário"
+        terminalBody.style.color = '#ff5f56';
+        terminalInput.style.color = '#ff5f56';
+        
+        // Volta ao normal após 4 segundos
+        setTimeout(() => {
+            terminalBody.style.color = '';
+            terminalInput.style.color = '';
+        }, 4000);
+        
+        return ['<span style="font-size: 1.2rem; font-weight: bold; letter-spacing: 2px;">Tensa Zangetsu...</span> ⚔️ (A pressão espiritual do terminal aumentou drasticamente)'];
+    },
+
+    // 4. Um feitiço útil
+    lumos: () => {
+        // Pega o contêiner principal para "acender a luz"
+        const container = document.querySelector('.terminal-container');
+        if (container) container.style.background = '#e0e5ec'; // Fundo claro
+        terminalBody.style.color = '#1a1b26'; // Letra escura
+        terminalInput.style.color = '#1a1b26';
+        
+        setTimeout(() => {
+            if (container) container.style.background = ''; // Reseta o fundo
+            terminalBody.style.color = '';
+            terminalInput.style.color = '';
+        }, 5000);
+
+        return ['✨ <span style="font-style: italic;">Lumos Maxima!</span> (O terminal ficará ofuscante por 5 segundos)'];
+    }
+    
+    
 };
+
+
+
 
 function escreverNoTerminal(texto, tipo = 'output') {
     const p = document.createElement('p');
@@ -67,7 +135,7 @@ if (terminalInput) {
         if (!cmd) return;
 
         // Mostra o comando digitado
-        escreverNoTerminal(`<span class="prompt">igor@pop-os:~$</span> ${cmd}`, 'cmd');
+        escreverNoTerminal(`<span class="prompt">igor@terminal-os:~$</span> ${cmd}`, 'cmd');
 
         if (cmd in comandos) {
             const linhas = comandos[cmd]();
