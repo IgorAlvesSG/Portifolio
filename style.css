@@ -1,8 +1,7 @@
-/* Reset e Base */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Garante que o padding não aumente o tamanho do elemento */
+    box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -12,45 +11,58 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
-/* --- MENU LATERAL --- */
-.menu-lateral{
-    background-color: rgba(42, 34, 82, 0.6); /* Roxo com transparência */
+/* =========================================
+   MENU LATERAL FIXO
+   ========================================= */
+
+.menu-lateral {
+    background-color: rgba(42, 34, 82, 0.6);
     padding: 30px 15px;
-    border-radius: 60px; /* Formato de pílula */
+    border-radius: 60px;
     display: flex;
     flex-direction: column;
     gap: 40px;
-    min-width: 80px; /* Garante que a barra não suma */
-    align-items: left;
-    height: 100px;
+    min-width: 80px;
+    align-items: center;
     position: fixed;
     left: 40px;
+    top: 50%;
+    transform: translateY(-50%); /* FIX: centraliza verticalmente de forma confiável */
     height: 300px;
+    z-index: 100;
 }
+
 .item {
-    width: 50px; /* Aumentei um pouco para respirar melhor */
+    width: 50px;
     height: 50px;
-    background-color: rgba(255, 255, 255, 0.05); /* Mais sutil */
+    background-color: rgba(255, 255, 255, 0.05);
     border-radius: 50%;
     display: flex;
-    align-items: center;     /* Centraliza vertical */
-    justify-content: center; /* Centraliza horizontal */
-    transition: 0.3s;        /* Para o efeito de hover */
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.item:hover {
+    background-color: rgba(138, 43, 226, 0.3);
 }
 
 .item img {
-    width: 24px;  /* Tamanho fixo para os ícones */
+    width: 24px;
     height: 24px;
-    filter: invert(1); /* Se seus ícones forem pretos, isso os deixará brancos */
+    filter: invert(1);
 }
 
-/*Cartão de visita*/
+/* =========================================
+   ESTILOS GERAIS DE TEXTO E BOTÃO
+   ========================================= */
+
 .texto {
-    /* Como o menu ocupa ~120px da esquerda (40px de left + 80px de largura) */
-    margin-left: 300px; 
+    margin-left: 200px;
     padding: 40px;
     max-width: 800px;
 }
@@ -59,7 +71,6 @@ body {
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 10px;
-    /* Um degradê sutil para combinar com o roxo do menu */
     background: linear-gradient(to right, #fff, #a29bfe);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -68,33 +79,19 @@ body {
 .texto p {
     font-size: 1.2rem;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.7); /* Branco suave para melhor leitura */
-    max-width: 500px;
+    color: rgba(255, 255, 255, 0.7);
 }
 
-/* Um detalhe: se quiser que o texto também fique centralizado verticalmente */
-body {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Alinha ao início por causa do margin-left */
-}
-/* --- BOTÃO HOME --- */
 .botao-home {
     margin-top: 25px;
-    
-    /* VOLTAMOS PARA O SEU TAMANHO ORIGINAL */
     padding: 12px 35px;
     font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: white;
-    
-    /* AS DUAS LINHAS PARA ELE NÃO ESTICAR NA TELA TODA */
-    width: fit-content; 
-    align-self: flex-start; 
-    
-    /* SEU VISUAL ORIGINAL */
+    width: fit-content;
+    align-self: flex-start;
     background: linear-gradient(45deg, #4b3a92, #8a2be2);
     border: none;
     border-radius: 50px;
@@ -103,23 +100,146 @@ body {
     box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
 }
 
-/* Efeito ao passar o mouse (O seu original!) */
 .botao-home:hover {
-    transform: translateY(-3px); 
-    box-shadow: 0 8px 25px rgba(138, 43, 226, 0.5); 
-    filter: brightness(1.1); 
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(138, 43, 226, 0.5);
+    filter: brightness(1.1);
 }
 
-/* Efeito ao clicar (O seu original!) */
 .botao-home:active {
     transform: translateY(1px);
 }
 
-/*  GRID DE PROJETOS E CARDS  */
+/* =========================================
+   TERMINAL
+   ========================================= */
+
+.terminal-container {
+    width: 100%;
+    max-width: 500px;
+    background: #1a1b26;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.terminal-header {
+    background: #24283b;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.bolinhas { display: flex; gap: 8px; }
+.bolinha { width: 12px; height: 12px; border-radius: 50%; }
+.vermelha { background: #ff5f56; }
+.amarela { background: #ffbd2e; }
+.verde   { background: #27c93f; }
+
+.terminal-titulo {
+    flex: 1;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+    margin-left: -40px;
+}
+
+.terminal-body {
+    padding: 20px;
+    height: 300px;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.2);
+    color: #a9b1d6;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal-body::-webkit-scrollbar { width: 8px; }
+.terminal-body::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.terminal-output { flex: 1; }
+.terminal-output p { margin: 5px 0; line-height: 1.5; }
+.comando-destaque { color: #bb9af7; font-weight: bold; }
+
+.terminal-input-line {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.prompt {
+    color: #9ece6a;
+    margin-right: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+#terminal-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #a9b1d6;
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    outline: none;
+}
+
+/* =========================================
+   LAYOUT DA HOME (SPLIT SCREEN)
+   ========================================= */
+
+#home.texto {
+    max-width: 1400px;
+    width: 100%;
+    margin-left: 150px;
+    padding-right: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.container-home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+}
+
+.info-home {
+    width: 55%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-home h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    white-space: normal;
+}
+
+.box-terminal {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* =========================================
+   GRID DE PROJETOS E CARDS
+   ========================================= */
+
+/* FIX: classe estava no HTML mas faltava no CSS */
 .grid-projetos {
     display: grid;
-    /* Cria colunas que se ajustam automaticamente ao tamanho da tela */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     margin-top: 30px;
     width: 100%;
@@ -129,7 +249,7 @@ body {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 25px;
-    border-radius: 20px;
+    border-radius: 20px; /* harmonizado com o resto */
     transition: 0.3s ease;
 }
 
@@ -145,6 +265,12 @@ body {
     color: white;
 }
 
+.card p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.5;
+}
+
 .tag-linguagem {
     font-size: 0.75rem;
     font-weight: bold;
@@ -155,44 +281,52 @@ body {
     text-transform: uppercase;
 }
 
-/* Cores específicas para cada tecnologia */
 .python { background: #3776ab33; color: #5dade2; }
-.java { background: #b0721933; color: #f5b041; }
-.cpp { background: #f34b7d33; color: #f1948a; }
-
+.java   { background: #b0721933; color: #f5b041; }
+.cpp    { background: #f34b7d33; color: #f1948a; }
 
 /* =========================================
-   SEÇÃO DE CONTATO (SPLIT SCREEN TURBINADO)
+   SEÇÃO SOBRE
    ========================================= */
 
-
-/* 1. O SEGREDO DO ESPAÇO: Alarga a tela só nessa aba */
-#contato.texto {
-    max-width: 1400px; /* Aumentamos bastante o limite para monitores grandes */
-    width: 90%; /* Força ele a tentar ocupar a tela */
-    margin-right: auto; /* Joga o respiro que sobra para o lado direito também */
+#sobre.texto {
+    max-width: 1000px;
+    width: 100%;
+    margin-left: 150px;
 }
 
-/* 2. O Container Principal */
+/* =========================================
+   SEÇÃO DE CONTATO
+   ========================================= */
+
+#contato.texto {
+    max-width: 1400px;
+    width: 90%;
+    margin-right: auto;
+}
+
 .container-contato {
     display: flex;
-    gap: 80px; 
+    gap: 80px;
     width: 100%;
     margin-top: 20px;
-    align-items: center; 
-    justify-content: space-between; 
+    align-items: center;
+    justify-content: space-between;
 }
-/* --- LADO ESQUERDO: INFO --- */
+
+/* Lado esquerdo: info */
 .info-contato {
-    flex: 1; 
+    flex: 1;
     display: flex;
     flex-direction: column;
 }
+
 .link-dado {
     text-decoration: none;
     color: inherit;
-    display: block; /* Garante que a área clicável pegue o card todo */
+    display: block;
 }
+
 .subtitulo-contato {
     font-size: 0.8rem;
     font-weight: bold;
@@ -221,7 +355,6 @@ body {
     gap: 20px;
 }
 
-/* Micro-interações nos itens de contato */
 .item-dado {
     display: flex;
     align-items: center;
@@ -261,15 +394,13 @@ body {
     color: white;
 }
 
-/* --- LADO DIREITO: CARD DO FORMULÁRIO --- */
+/* Lado direito: formulário */
 .box-formulario {
-    flex: 1.2; 
-    background: rgba(255, 255, 255, 0.02); 
+    flex: 1.2;
+    background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 50px; /* Mais "gordinho" por dentro */
+    padding: 50px;
     border-radius: 20px;
-    
-    /* Efeito Glassmorphism (Vidro) */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
@@ -288,7 +419,7 @@ body {
     font-weight: 500;
 }
 
-.grupo-input input, 
+.grupo-input input,
 .grupo-input textarea {
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -298,6 +429,8 @@ body {
     font-size: 1rem;
     outline: none;
     transition: all 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    resize: vertical;
 }
 
 .grupo-input input::placeholder,
@@ -305,8 +438,7 @@ body {
     color: rgba(255, 255, 255, 0.3);
 }
 
-/* Brilho ao clicar nos campos */
-.grupo-input input:focus, 
+.grupo-input input:focus,
 .grupo-input textarea:focus {
     border-color: #8a2be2;
     background: rgba(138, 43, 226, 0.05);
@@ -314,10 +446,9 @@ body {
     transform: translateY(-2px);
 }
 
-/* Botão dentro do form */
 .box-formulario .botao-home {
-    width: 100%; 
+    width: 100%;
     text-align: center;
     margin-top: 15px;
-    padding: 15px; 
+    padding: 15px;
 }

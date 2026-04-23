@@ -20,13 +20,42 @@
     </nav>
 
 <main>
-    <section id="home" class="texto secao-conteudo">
-        <h1>Olá, eu sou o Igor</h1>
-        <p>
-           Como desenvolvedor web, meu objetivo é ajudar marcas e pessoas a marcarem presença no mundo digital. 
-           Trabalho no desenvolvimento de interfaces responsivas.
-        </p>
-        <button class="botao-home" onclick="trocarPagina('contato')">contato</button>
+<section id="home" class="texto secao-conteudo">
+        <div class="container-home">
+            
+            <div class="info-home">
+                <h1>Olá, eu sou o Igor</h1>
+                <p>
+                   Como desenvolvedor web, meu objetivo é ajudar marcas e pessoas a marcarem presença no mundo digital. 
+                   Trabalho no desenvolvimento de interfaces responsivas.
+                </p>
+                <button class="botao-home" onclick="trocarPagina('contato')">contato</button>
+            </div>
+
+            <div class="box-terminal">
+                <div class="terminal-container">
+                    <div class="terminal-header">
+                        <div class="bolinhas">
+                            <span class="bolinha vermelha"></span>
+                            <span class="bolinha amarela"></span>
+                            <span class="bolinha verde"></span>
+                        </div>
+                        <div class="terminal-titulo">igor@pop-os: ~</div>
+                    </div>
+                    <div class="terminal-body" id="terminal-body">
+                        <div class="terminal-output" id="terminal-output">
+                            <p>Bem-vindo ao portfólio interativo.</p>
+                            <p>Digite <span class="comando-destaque">help</span> para ver os comandos disponíveis.</p>
+                        </div>
+                        <div class="terminal-input-line">
+                            <span class="prompt">igor@pop-os:~$</span>
+                            <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" autofocus>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section>
 
     <section id="sobre" class="texto secao-conteudo" style="display: none;">
@@ -115,6 +144,8 @@
 
         </div>
     </section>
+
+
 </main>
 
     <script src="script.js"></script>
