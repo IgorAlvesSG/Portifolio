@@ -59,6 +59,20 @@ const comandos = {
         '<span style="color: #bb9af7;">"Desde quando você estava sob a impressão de que este era um portfólio comum?"</span> 🎭',
         '(O terminal parece levemente distorcido agora)'
     ],
+    expelliarmus: () => {
+        // Desfoca a tela por 3 segundos como se tivesse perdido a varinha/foco
+        document.body.style.filter = 'blur(5px)';
+        setTimeout(() => document.body.style.filter = 'none', 3000);
+        return ['✨ <span style="color: #ffbd2e;">Expelliarmus!</span> Você desarmou o navegador por 3 segundos.'];
+    },
+    // --- Referência de Programador (ADS Mode) ---
+    "hello world": () => [
+        'print("Hello, World!")',
+        'System.out.println("Hello, World!");',
+        'std::cout << "Hello, World!";',
+        'console.log("Hello, World!");',
+        '<span class="comando-destaque">O começo de tudo.</span>'
+    ],
 
     sudo: () => [
         '<span style="color: #ff5f56;">igor não está no arquivo sudoers. Este incidente será relatado.</span> 🐧'
